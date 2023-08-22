@@ -6,22 +6,22 @@
 
 bool Observable::Register(IObserver* observer)
 {
-	auto iter = std::find(std::cbegin(Observers_), std::cend(Observers_), observer);
-	if (iter != std::cend(Observers_))
+	auto iter = std::find(std::cbegin(mObservers), std::cend(mObservers), observer);
+	if (iter != std::cend(mObservers))
 	{
 		return false;
 	}
 
-	Observers_.push_back(observer);
+	mObservers.push_back(observer);
 	return true;
 }
 
 bool Observable::Remove(IObserver* observer)
 {
-  auto iter = std::find(std::begin(Observers_), std::end(Observers_), observer);
-  if (iter != std::cend(Observers_))
+  auto iter = std::find(std::begin(mObservers), std::end(mObservers), observer);
+  if (iter != std::end(mObservers))
   {
-		Observers_.erase(iter);
+		mObservers.erase(iter);
 		return true;
   }
 
@@ -30,19 +30,19 @@ bool Observable::Remove(IObserver* observer)
 
 void Observable::Notify()
 {
-	if (!bChanged_)
+	if (!mbChanged)
 		return;
 
-	for (auto observer : Observers_)
+	for (auto observer : mObservers)
 	{
 		observer->Update(this);
 	}
 
-	bChanged_ = false;
+	mbChanged = false;
 }
 
 void Observable::SetChanged()
 {
-	bChanged_ = true;
+	mbChanged = true;
 	Notify();
 }

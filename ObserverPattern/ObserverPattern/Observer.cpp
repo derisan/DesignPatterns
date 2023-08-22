@@ -6,9 +6,9 @@
 #include "Observable.h"
 
 DuckObserver::DuckObserver(Observable* observable)
-  : Observable_(observable)
+  : mSubject(observable)
 {
-  Observable_->Register(this);
+  mSubject->Register(this);
 }
 
 void DuckObserver::Update(Observable* subject)

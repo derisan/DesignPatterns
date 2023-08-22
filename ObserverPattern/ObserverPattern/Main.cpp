@@ -1,6 +1,7 @@
+#include <iostream>
+#include <string>
 #include "Duck.h"
 #include "Observer.h"
-#include <string>
 
 int main()
 {
@@ -9,18 +10,21 @@ int main()
 
   while (true)
   {
-    int ch = getchar();
-    ch = std::toupper(ch);
+    std::cout << "\nPress A or D to manipulate Duck' HP(Q to quit)\n";
 
-    if (ch == 'A' || ch == 'D')
+    char input = 0;
+    std::cin >> input;
+    input = static_cast<char>(std::toupper(input));
+
+    if (input == 'A' || input == 'D')
     {
       const auto curHP = duck.GetHealthPoint();
-      if (ch == 'A')
+      if (input == 'A')
         duck.SetHealthPoint(curHP - 1);
       else
         duck.SetHealthPoint(curHP + 1);
     }
-    else if (ch == 'Q')
+    else if (input == 'Q')
       break;
   }
 }
