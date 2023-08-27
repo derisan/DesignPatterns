@@ -2,7 +2,10 @@
 
 #include <iostream>
 
-CheesePizza::CheesePizza()
+#include "IngredientFactory.h"
+
+CheesePizza::CheesePizza(IngredientFactory* ingredientFactory)
+  : mIngredientFactory(ingredientFactory)
 {
   SetDescription(L"CheesePizza");
 }
@@ -10,6 +13,9 @@ CheesePizza::CheesePizza()
 void CheesePizza::Prepare()
 {
   std::wcout << L"Preparing " << GetDescription() << std::endl;
+  SetDough(mIngredientFactory->CreateDough());
+  SetVeggies(mIngredientFactory->CreateVeggies());
+  SetSauce(mIngredientFactory->CreateSauce());
 }
 
 void CheesePizza::Bake()
@@ -27,7 +33,8 @@ void CheesePizza::Box()
   std::wcout << "Box with special IU box" << std::endl;
 }
 
-HawaiianPizza::HawaiianPizza()
+HawaiianPizza::HawaiianPizza(IngredientFactory* ingredientFactory)
+  : mIngredientFactory(ingredientFactory)
 {
   SetDescription(L"HawaiianPizza");
 }
@@ -35,6 +42,9 @@ HawaiianPizza::HawaiianPizza()
 void HawaiianPizza::Prepare()
 {
   std::wcout << L"Preparing " << GetDescription() << std::endl;
+  SetDough(mIngredientFactory->CreateDough());
+  SetVeggies(mIngredientFactory->CreateVeggies());
+  SetSauce(mIngredientFactory->CreateSauce());
 }
 
 void HawaiianPizza::Bake()
@@ -50,4 +60,10 @@ void HawaiianPizza::Cut()
 void HawaiianPizza::Box()
 {
   std::wcout << "Box with special BTS box" << std::endl;
+}
+
+void Pizza::PrintInfo()
+{
+  std::wcout << mDescription << L" is made of " << GetDough() << L", "
+    << GetVeggies() << L", " << GetSauce() << L".\n";
 }

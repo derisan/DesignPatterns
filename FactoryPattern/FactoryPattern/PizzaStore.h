@@ -12,6 +12,7 @@ public:
   Pizza* OrderPizza(ePizzaType pizzaType) const;
 
 protected:
+  // Factory method
   virtual Pizza* CreatePizza(ePizzaType pizzaType) const = 0;
 };
 

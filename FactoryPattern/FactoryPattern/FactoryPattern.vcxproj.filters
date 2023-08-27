@@ -20,6 +20,9 @@
     <ClCompile Include="Pizza.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IngredientFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PizzaStore.h">
@@ -29,6 +32,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Pizza.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IngredientFactory.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

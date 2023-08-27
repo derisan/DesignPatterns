@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="IngredientFactory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Pizza.cpp" />
     <ClCompile Include="PizzaStore.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defines.h" />
+    <ClInclude Include="IngredientFactory.h" />
     <ClInclude Include="Pizza.h" />
     <ClInclude Include="PizzaStore.h" />
   </ItemGroup>
