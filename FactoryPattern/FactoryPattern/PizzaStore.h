@@ -21,3 +21,10 @@ class NYPizzaStore
 protected:
   Pizza* CreatePizza(ePizzaType pizzaType) const override;
 };
+
+class CCPizzaStore
+  : public PizzaStore
+{
+protected:
+  Pizza* CreatePizza(ePizzaType pizzaType) const override;
+};

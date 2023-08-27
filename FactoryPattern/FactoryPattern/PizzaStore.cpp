@@ -29,3 +29,15 @@ Pizza* NYPizzaStore::CreatePizza(ePizzaType pizzaType) const
     return nullptr;
   }
 }
+
+Pizza* CCPizzaStore::CreatePizza(ePizzaType pizzaType) const
+{
+  switch (pizzaType)
+  {
+  case ePizzaType::Hawaiian:
+    return new HawaiianPizza;
+
+  default:
+    return nullptr;
+  }
+}

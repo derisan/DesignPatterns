@@ -31,3 +31,15 @@ public:
   virtual void Cut();
   virtual void Box();
 };
+
+class HawaiianPizza
+  : public Pizza
+{
+public:
+  HawaiianPizza();
+
+  virtual void Prepare();
+  virtual void Bake();
+  virtual void Cut();
+  virtual void Box();
+};
