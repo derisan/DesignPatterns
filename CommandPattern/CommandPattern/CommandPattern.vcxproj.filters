@@ -20,6 +20,12 @@
     <ClCompile Include="MoviePlayCommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShotCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RemoteControl.h">
@@ -32,6 +38,15 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Movie.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShotCommand.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Gun.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -127,15 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MoviePlayCommand.cpp" />
     <ClCompile Include="RemoteControl.cpp" />
+    <ClCompile Include="ShotCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command.h" />
+    <ClInclude Include="Gun.h" />
+    <ClInclude Include="Keyboard.h" />
     <ClInclude Include="Movie.h" />
     <ClInclude Include="MoviePlayCommand.h" />
     <ClInclude Include="RemoteControl.h" />
+    <ClInclude Include="ShotCommand.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
